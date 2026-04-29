@@ -1,5 +1,7 @@
 # ElectionEdu | Master the Indian Election Process
 
+A platform where you can learn and gain knowledge about Election Process Education
+
 ## Chosen Vertical
 **Education & Civic Engagement (EdTech)**
 Our mission is to educate citizens on the complex, multi-stage Indian Election Process, transforming civic duty into an accessible, engaging learning experience.
