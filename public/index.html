@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElectionEdu | Premium Learning Portal</title>
+    <meta name="description" content="An interactive and visually stunning platform for understanding the Indian Election Process.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <span class="logo-icon">🗳️</span>
+                    Election<span class="text-gradient">Edu</span>
+                </div>
+                <p class="tagline">Interactive Learning</p>
+            </div>
+            
+            <nav class="nav-links">
+                <a href="#" id="nav-home" class="nav-item active">
+                    <span class="nav-icon">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                    </span>
+                    <span>Dashboard</span>
+                </a>
+                <a href="#" id="nav-roadmap" class="nav-item">
+                    <span class="nav-icon">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                    </span>
+                    <span>Roadmap</span>
+                </a>
+                <a href="#" id="nav-checklist" class="nav-item">
+                    <span class="nav-icon">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+                    </span>
+                    <span>Checklist</span>
+                </a>
+                <a href="#" id="nav-glossary" class="nav-item">
+                    <span class="nav-icon">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+                    </span>
+                    <span>Glossary</span>
+                </a>
+                <a href="#" id="nav-forms" class="nav-item">
+                    <span class="nav-icon">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                    </span>
+                    <span>Forms & Docs</span>
+                </a>
+                <a href="#" id="nav-help" class="nav-item">
+                    <span class="nav-icon">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                    </span>
+                    <span>Official Help</span>
+                </a>
+                <a href="#" id="nav-quiz" class="nav-item">
+                    <span class="nav-icon">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect><path d="M9 14l2 2 4-4"></path></svg>
+                    </span>
+                    <span>Quiz</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">☀️ Light Mode</button>
+            </div>
+        </aside>
+        <!-- Mobile Header (Visible only on small screens) -->
+        <header class="mobile-header">
+            <div class="logo" style="font-size: 1.5rem;">
+                <span class="logo-icon">🗳️</span>
+                Election<span class="text-gradient">Edu</span>
+            </div>
+            <button id="mobile-menu-btn" aria-label="Toggle Menu">
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            </button>
+        </header>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Home / Dashboard View -->
+            <section id="view-home" class="view-section active">
+                <header class="page-header">
+                    <div>
+                        <h1 class="page-title">Welcome to <span class="text-gradient">Democracy</span></h1>
+                        <p class="page-subtitle">Your personalized guide to the Indian election process.</p>
+                    </div>
+                    <button class="primary-btn glow-effect" id="start-beginner-btn" aria-label="Start Beginner Mode">
+                        <span>🎓 Start Beginner Mode</span>
+                    </button>
+                </header>
+
+                <div class="dashboard-grid">
+                    <!-- AI Assistant Section -->
+                    <div class="glass-card chat-card">
+                        <div class="card-header">
+                            <div class="header-title">
+                                <span class="header-icon">🤖</span>
+                                <h2>AI Assistant</h2>
+                            </div>
+                            <button id="tts-chat-btn" class="icon-btn" aria-label="Read Aloud" title="Read Aloud">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+                            </button>
+                        </div>
+                        <div id="chat-messages" class="chat-messages">
+                            <div class="message system">
+                                Namaste! I'm your Election Assistant. Ask me anything about the Indian electoral system, and I'll explain it simply.
+                            </div>
+                        </div>
+                        <div class="chat-suggestions" id="chat-suggestions">
+                            <button class="suggestion-chip">📝 Registration</button>
+                            <button class="suggestion-chip">📠 EVM/VVPAT</button>
+                            <button class="suggestion-chip">🗳️ Voting Day</button>
+                            <button class="suggestion-chip">🚫 NOTA</button>
+                            <button class="suggestion-chip">☝️ Indelible Ink</button>
+                        </div>
+                        <div class="chat-input-wrapper">
+                            <input type="text" id="user-input" placeholder="Ask a question..." autocomplete="off">
+                            <button id="send-btn" class="send-btn" aria-label="Send Message">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path></svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-right-col">
+                        <!-- Flashcards Section -->
+                        <div class="glass-card flashcard-card">
+                            <div class="card-header">
+                                <div class="header-title">
+                                    <span class="header-icon">⚡</span>
+                                    <h2>Quick Facts</h2>
+                                </div>
+                                <button id="tts-flashcard-btn" class="icon-btn" aria-label="Read Flashcard" title="Read Flashcard">
+                                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+                                </button>
+                            </div>
+                            
+                            <div class="flashcard-wrapper">
+                                <div id="single-flashcard-container" class="flash-container">
+                                    <!-- Flashcard injected via JS -->
+                                </div>
+                            </div>
+                            
+                            <div class="flashcard-controls">
+                                <div class="flash-nav">
+                                    <button id="prev-card" class="nav-arrow" aria-label="Previous">
+                                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                                    </button>
+                                    <span id="card-counter" class="counter-badge">1/6</span>
+                                    <button id="next-card" class="nav-arrow" aria-label="Next">
+                                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Checklist Progress Preview -->
+                        <div class="glass-card mt-4 p-4 cursor-pointer" id="dash-checklist-btn" aria-label="Go to Checklist">
+                            <div class="header-title mb-2">
+                                <span class="header-icon">✅</span>
+                                <h2>Voting Plan</h2>
+                            </div>
+                            <div class="progress-bar-bg mt-2">
+                                <div id="dash-checklist-progress" class="progress-bar-fill" style="width: 0%;"></div>
+                            </div>
+                            <p class="text-sm mt-2 text-secondary text-right" id="dash-checklist-text">0% Completed</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quiz CTA Banner -->
+                <div class="glass-card quiz-cta-card mt-8">
+                    <div class="cta-content">
+                        <div class="cta-text">
+                            <h3>Ready to test your knowledge?</h3>
+                            <p>Take our interactive challenge to see how much you've learned.</p>
+                        </div>
+                        <button class="primary-btn glow-effect cta-btn" id="go-to-quiz-btn" aria-label="Take Quiz">
+                            <span>Take Quiz</span>
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polyline points="5 12 19 12"></polyline><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Roadmap View -->
+            <section id="view-roadmap" class="view-section hidden">
+                <header class="page-header text-center">
+                    <h1 class="page-title">Election <span class="text-gradient">Roadmap</span></h1>
+                    <p class="page-subtitle">The 12 steps of the world's largest democratic exercise.</p>
+                </header>
+                <div class="timeline-container" id="roadmap-container">
+                    <!-- Injected by JS -->
+                </div>
+            </section>
+
+            <!-- Checklist View -->
+            <section id="view-checklist" class="view-section hidden">
+                <header class="page-header text-center">
+                    <h1 class="page-title">My Voting <span class="text-gradient">Plan</span></h1>
+                    <p class="page-subtitle">Track your readiness for the upcoming election.</p>
+                </header>
+                <div class="glass-card p-6 max-w-3xl mx-auto">
+                    <div class="flex-between mb-4">
+                        <h2>Your Progress</h2>
+                        <span id="checklist-percentage" class="text-gradient font-bold">0%</span>
+                    </div>
+                    <div class="progress-bar-bg mb-6">
+                        <div id="checklist-progress-bar" class="progress-bar-fill" style="width: 0%;"></div>
+                    </div>
+                    <div id="checklist-container" class="checklist-container">
+                        <!-- Injected by JS -->
+                    </div>
+                    <div class="text-center mt-6">
+                        <button class="outline-btn" id="reset-checklist-btn" aria-label="Reset Checklist">Reset Progress</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Glossary View -->
+            <section id="view-glossary" class="view-section hidden">
+                <header class="page-header text-center">
+                    <h1 class="page-title">Election <span class="text-gradient">Glossary</span></h1>
+                    <p class="page-subtitle">Learn the key terms and acronyms used in Indian elections.</p>
+                </header>
+                <div class="search-container max-w-2xl mx-auto mb-8">
+                    <input type="text" id="glossary-search" class="search-input" placeholder="Search terms (e.g. EVM, NOTA)..." aria-label="Search Glossary">
+                </div>
+                <div id="glossary-container" class="glossary-grid max-w-4xl mx-auto">
+                    <!-- Injected by JS -->
+                </div>
+            </section>
+
+            <!-- Forms & Docs View -->
+            <section id="view-forms" class="view-section hidden">
+                <header class="page-header text-center">
+                    <h1 class="page-title">Forms & <span class="text-gradient">Docs</span></h1>
+                    <p class="page-subtitle">Understand which form to fill and what documents you need.</p>
+                </header>
+                <div id="forms-container" class="forms-grid max-w-5xl mx-auto">
+                    <!-- Injected by JS -->
+                </div>
+            </section>
+
+            <!-- Official Help View -->
+            <section id="view-help" class="view-section hidden">
+                <header class="page-header text-center">
+                    <h1 class="page-title">Official <span class="text-gradient">Help</span></h1>
+                    <p class="page-subtitle">Always verify information from official sources.</p>
+                </header>
+                <div class="glass-card max-w-3xl mx-auto p-8 text-center">
+                    <div class="warning-banner mb-6">
+                        ⚠️ <strong>Disclaimer:</strong> This is an educational platform. For official voter registration and authentic election schedules, please use the official government portals below.
+                    </div>
+                    <div class="help-links-grid">
+                        <a href="https://eci.gov.in/" target="_blank" class="help-link-card" aria-label="Election Commission of India">
+                            <span class="icon">🏛️</span>
+                            <h3>Election Commission of India</h3>
+                            <p>eci.gov.in</p>
+                        </a>
+                        <a href="https://voters.eci.gov.in/" target="_blank" class="help-link-card" aria-label="National Voters Service Portal">
+                            <span class="icon">💻</span>
+                            <h3>Voters Service Portal (NVSP)</h3>
+                            <p>voters.eci.gov.in</p>
+                        </a>
+                        <div class="help-link-card">
+                            <span class="icon">📱</span>
+                            <h3>Voter Helpline App</h3>
+                            <p>Available on iOS & Android</p>
+                        </div>
+                        <div class="help-link-card">
+                            <span class="icon">📞</span>
+                            <h3>National Helpline</h3>
+                            <p>Call 1950 (Toll Free)</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Quiz View -->
+            <section id="view-quiz" class="view-section hidden">
+                <div class="quiz-wrapper">
+                    <div class="glass-card main-quiz-card">
+                        
+                        <!-- Quiz Start -->
+                        <div id="quiz-start" class="quiz-state active-state text-center">
+                            <div class="quiz-icon-large">🏆</div>
+                            <h2 class="page-title">Knowledge <span class="text-gradient">Quiz</span></h2>
+                            <p class="page-subtitle">Test your understanding of Indian Democracy, earn points, and become an informed citizen.</p>
+                            <button class="primary-btn glow-effect mt-8" id="start-quiz-btn" aria-label="Start Quiz">
+                                <span>Start Quiz</span>
+                            </button>
+                        </div>
+
+                        <!-- Quiz Content -->
+                        <div id="quiz-content" class="quiz-state hidden">
+                            <div class="quiz-header">
+                                <div class="quiz-progress-info">
+                                    <span id="question-number" class="q-num">Question 1 of 10</span>
+                                </div>
+                                <div class="progress-bar-bg">
+                                    <div id="progress" class="progress-bar-fill"></div>
+                                </div>
+                            </div>
+                            
+                            <h3 id="question-text" class="question-text">Loading question...</h3>
+                            
+                            <div class="options-grid" id="options-container">
+                                <!-- Options injected by JS -->
+                            </div>
+                        </div>
+
+                        <!-- Quiz Results -->
+                        <div id="quiz-result" class="quiz-state hidden text-center">
+                            <div class="result-icon">🎉</div>
+                            <h2>Quiz Complete!</h2>
+                            <div class="score-display">
+                                <span class="score-label">Total Score</span>
+                                <div id="final-score" class="score-value text-gradient">0 Points</div>
+                            </div>
+                            <p id="result-message" class="result-msg"></p>
+                            <button class="outline-btn mt-6" onclick="location.reload()" aria-label="Restart Platform">
+                                <span>Restart Platform</span>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Beginner Mode Modal Overlay -->
+    <div id="beginner-modal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="beginner-title">
+        <div class="modal-content glass-card">
+            <button id="close-beginner-btn" class="close-btn" aria-label="Close modal">×</button>
+            <div class="modal-header">
+                <span class="modal-icon">🎓</span>
+                <h2 id="beginner-title">Beginner Guide</h2>
+                <div class="step-indicator" id="beginner-step-indicator">Step 1 of 5</div>
+            </div>
+            <div class="modal-body" id="beginner-content">
+                <!-- Content injected via JS -->
+            </div>
+            <div class="modal-footer">
+                <button class="outline-btn" id="beginner-ask-ai-btn" aria-label="Ask AI about this">Ask AI 🤖</button>
+                <button class="primary-btn" id="beginner-next-btn" aria-label="Next step">Next Step ➡️</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Background decorative elements -->
+    <div class="bg-shape shape-1"></div>
+    <div class="bg-shape shape-2"></div>
+
+    <script src="app.js" type="module"></script>
+</body>
+</html>

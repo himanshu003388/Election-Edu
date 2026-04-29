@@ -1,0 +1,17 @@
+{
+  "name": "election-edu-india",
+  "version": "1.0.0",
+  "description": "Interactive platform for Indian Election Process Education",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "@google-cloud/vertexai": "^1.1.0",
+    "@google/generative-ai": "^0.24.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  }
+}
